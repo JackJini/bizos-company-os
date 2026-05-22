@@ -24,11 +24,11 @@ export const DEMO_COMPANY_ID = "00000000-0000-0000-0000-00000000c001";
 
 export const demoCompany: Company = {
   id: DEMO_COMPANY_ID,
-  name: "BIZOS Demo",
-  code: "BIZOS",
+  name: "SingapoDent Demo",
+  code: "SINGAPODENT",
   currency: "VND",
   timezone: "Asia/Ho_Chi_Minh",
-  settings: { brand: "BIZOS" },
+  settings: { brand: "SingapoDent" },
 };
 
 export const demoDepartments: Department[] = [
@@ -70,20 +70,20 @@ function mkEmp(
 }
 
 export const demoEmployees: Employee[] = [
-  mkEmp("e1", "Nguyễn Văn A", "ceo@bizos.demo", null, "CEO", 80_000_000, null),
-  mkEmp("e2", "Trần Thị B", "hr@bizos.demo", "d005", "Head of HR", 45_000_000),
-  mkEmp("e3", "Lê Văn C", "cfo@bizos.demo", "d006", "CFO", 50_000_000),
-  mkEmp("e4", "Phạm Thu D", "sales.head@bizos.demo", "d001", "Head of Sales", 48_000_000),
-  mkEmp("e5", "Hoàng Minh E", "mkt.head@bizos.demo", "d002", "Head of Marketing", 45_000_000),
-  mkEmp("e6", "Đỗ Quỳnh F", "ops.head@bizos.demo", "d003", "Head of Operations", 42_000_000),
-  mkEmp("e7", "Vũ Thanh G", "cs.head@bizos.demo", "d004", "Head of CS", 38_000_000),
-  mkEmp("e8", "Nguyễn Hải H", "a01@bizos.demo", "d001", "Senior Sales", 20_000_000, "e4"),
-  mkEmp("e9", "Trần Nam I", "a02@bizos.demo", "d001", "Sales Specialist", 14_000_000, "e4"),
-  mkEmp("e10", "Lý Hoa K", "a03@bizos.demo", "d002", "Content Lead", 18_000_000, "e5"),
-  mkEmp("e11", "Phạm Tú L", "a04@bizos.demo", "d002", "Performance Ads", 16_000_000, "e5"),
-  mkEmp("e12", "Nguyễn Lan M", "a05@bizos.demo", "d003", "Ops Specialist", 13_000_000, "e6"),
-  mkEmp("e13", "Trần Sơn N", "a06@bizos.demo", "d004", "CS Specialist", 12_000_000, "e7"),
-  mkEmp("e14", "Đinh Hà O", "a07@bizos.demo", "d005", "HR Specialist", 13_000_000, "e2"),
+  mkEmp("e1", "Nguyễn Văn A", "ceo@singapodent.demo", null, "CEO", 80_000_000, null),
+  mkEmp("e2", "Trần Thị B", "hr@singapodent.demo", "d005", "Head of HR", 45_000_000),
+  mkEmp("e3", "Lê Văn C", "cfo@singapodent.demo", "d006", "CFO", 50_000_000),
+  mkEmp("e4", "Phạm Thu D", "sales.head@singapodent.demo", "d001", "Head of Sales", 48_000_000),
+  mkEmp("e5", "Hoàng Minh E", "mkt.head@singapodent.demo", "d002", "Head of Marketing", 45_000_000),
+  mkEmp("e6", "Đỗ Quỳnh F", "ops.head@singapodent.demo", "d003", "Head of Operations", 42_000_000),
+  mkEmp("e7", "Vũ Thanh G", "cs.head@singapodent.demo", "d004", "Head of CS", 38_000_000),
+  mkEmp("e8", "Nguyễn Hải H", "a01@singapodent.demo", "d001", "Senior Sales", 20_000_000, "e4"),
+  mkEmp("e9", "Trần Nam I", "a02@singapodent.demo", "d001", "Sales Specialist", 14_000_000, "e4"),
+  mkEmp("e10", "Lý Hoa K", "a03@singapodent.demo", "d002", "Content Lead", 18_000_000, "e5"),
+  mkEmp("e11", "Phạm Tú L", "a04@singapodent.demo", "d002", "Performance Ads", 16_000_000, "e5"),
+  mkEmp("e12", "Nguyễn Lan M", "a05@singapodent.demo", "d003", "Ops Specialist", 13_000_000, "e6"),
+  mkEmp("e13", "Trần Sơn N", "a06@singapodent.demo", "d004", "CS Specialist", 12_000_000, "e7"),
+  mkEmp("e14", "Đinh Hà O", "a07@singapodent.demo", "d005", "HR Specialist", 13_000_000, "e2"),
 ];
 
 export const demoKpis: Kpi[] = [

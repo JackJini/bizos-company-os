@@ -1,11 +1,11 @@
-# BIZOS — Business Operating System
+# SingapoDent — Business Operating System
 
 > 🇬🇧 **EN** · Company OS: **Task → personal KPI → team KPI → company KPI → Financials.**
 > A Next.js + Supabase business-operating system — 19 production-grade screens, KPI cascade, compensation rule engine, P&L/BS/CF, what-if Forecast, OKRs, Audit, SOPs.
 >
 > 🇻🇳 **VI** · Hệ thống vận hành công ty: **Task → KPI cá nhân → KPI phòng ban → KPI công ty → Tài chính.**
 >
-> **Live demo:** [bizos-company-os.vercel.app](https://bizos-company-os.vercel.app) — browse all 19 screens in Demo mode even without Supabase. Toggle **VI / EN** from the top bar.
+> **Live demo:** [singapodent-company-os.vercel.app](https://singapodent-company-os.vercel.app) — browse all 19 screens in Demo mode even without Supabase. Toggle **VI / EN** from the top bar.
 >
 > 📘 **Guide / Hướng dẫn:** [/guide](https://bizos-company-os.vercel.app/guide) — full walkthrough of all 19 screens + 3 end-to-end workflows + tips.
 
@@ -133,11 +133,11 @@ Mở http://localhost:3000 — redirect sang `/login`. Nếu chưa cấu hình S
 2. Vào **SQL Editor**, chạy lần lượt:
    - [`db/schema.sql`](db/schema.sql) — 40+ bảng + enums + triggers
    - [`db/policies.sql`](db/policies.sql) — RLS cho 7 role
-   - [`db/seed.sql`](db/seed.sql) — BIZOS Demo company + KPI cascade
-3. **Authentication → Users → Add user** tạo `ceo@bizos.demo`, `hr@bizos.demo`, `cfo@bizos.demo`, `sales.head@bizos.demo`.
+   - [`db/seed.sql`](db/seed.sql) — SingapoDent Demo company + KPI cascade
+3. **Authentication → Users → Add user** tạo `ceo@singapodent.demo`, `hr@singapodent.demo`, `cfo@singapodent.demo`, `sales.head@singapodent.demo`.
 4. Lấy `auth.users.id` và chạy:
    ```sql
-   update employees set auth_user_id = '<auth-id>' where email = 'ceo@bizos.demo';
+   update employees set auth_user_id = '<auth-id>' where email = 'ceo@singapodent.demo';
    insert into user_roles (auth_user_id, company_id, role)
    values ('<ceo-auth-id>', '00000000-0000-0000-0000-00000000c001', 'ceo');
    ```
@@ -217,4 +217,4 @@ Dockerfile · railway.json · vercel.json    deploy configs
 
 ## 📝 License
 
-Proprietary — **Alex Le · Titan Labs**. Xem code thoải mái, fork để học. Deploy production / tuỳ biến cho công ty → email `alexle@titanlabs.vn`.
+Proprietary — **SingapoDent**. Xem code thoải mái, fork để học. Deploy production / tuỳ biến cho công ty → liên hệ nhóm phát triển.

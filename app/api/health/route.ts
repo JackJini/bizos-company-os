@@ -4,7 +4,7 @@ import { getHealthSnapshot } from "@/lib/env";
 export async function GET() {
   return NextResponse.json({
     status: "ok",
-    service: "bizos",
+    service: "singapodent",
     ts: Date.now(),
     runtime: getHealthSnapshot(),
   });

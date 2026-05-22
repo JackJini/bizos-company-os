@@ -70,10 +70,10 @@ export async function getProfileScreenData() {
         notification_settings: demoNotificationSettings,
       },
       integrations: [
-        { provider: "Google Workspace", active: true, config: { workspace: "BIZOS Workspace", email: "nguyenvana@company.com" } },
-        { provider: "Slack", active: true, config: { workspace: "BIZOS Workspace" } },
-        { provider: "Notion", active: true, config: { workspace: "BIZOS Team" } },
-        { provider: "CRM System", active: true, config: { workspace: "bizos-crm.company.com" } },
+        { provider: "Google Workspace", active: true, config: { workspace: "SingapoDent Workspace", email: "nguyenvana@company.com" } },
+        { provider: "Slack", active: true, config: { workspace: "SingapoDent Workspace" } },
+        { provider: "Notion", active: true, config: { workspace: "SingapoDent Team" } },
+        { provider: "CRM System", active: true, config: { workspace: "singapodent-crm.company.com" } },
       ],
       notifications: [
         { title: "Cập nhật hồ sơ cá nhân", body: "01/06/2024 09:15", link: null, created_at: "2026-04-23T09:15:00Z" },

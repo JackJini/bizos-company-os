@@ -1,14 +1,14 @@
 -- =============================================================================
--- BIZOS seed data — BIZOS Demo company
+-- SingapoDent seed data — SingapoDent Demo company
 -- Run AFTER schema.sql and policies.sql.
 -- Assumes you've created auth users manually in Supabase for:
---   ceo@bizos.demo, hr@bizos.demo, finance@bizos.demo, sales@bizos.demo
+--   ceo@singapodent.demo, hr@singapodent.demo, finance@singapodent.demo, sales@singapodent.demo
 -- then update the auth_user_id values below to match.
 -- =============================================================================
 
 -- 1. Company
 insert into companies (id, name, code)
-values ('00000000-0000-0000-0000-00000000c001', 'BIZOS Demo', 'BIZOS')
+values ('00000000-0000-0000-0000-00000000c001', 'SingapoDent Demo', 'SINGAPODENT')
 on conflict (id) do nothing;
 
 -- 2. Departments
@@ -33,13 +33,13 @@ on conflict do nothing;
 
 -- 4. Sample employees (24 people)
 insert into employees (id, company_id, full_name, email, department_id, position_id, base_salary, status) values
-  ('00000000-0000-0000-0000-0000000000e1','00000000-0000-0000-0000-00000000c001','Nguyễn Văn A','ceo@bizos.demo',null,'00000000-0000-0000-0000-0000000000p1',80000000,'active'),
-  ('00000000-0000-0000-0000-0000000000e2','00000000-0000-0000-0000-00000000c001','Trần Thị B','hr@bizos.demo','00000000-0000-0000-0000-00000000d005','00000000-0000-0000-0000-0000000000p2',45000000,'active'),
-  ('00000000-0000-0000-0000-0000000000e3','00000000-0000-0000-0000-00000000c001','Lê Văn C','cfo@bizos.demo','00000000-0000-0000-0000-00000000d006','00000000-0000-0000-0000-0000000000p2',50000000,'active'),
-  ('00000000-0000-0000-0000-0000000000e4','00000000-0000-0000-0000-00000000c001','Phạm Thu D','sales.head@bizos.demo','00000000-0000-0000-0000-00000000d001','00000000-0000-0000-0000-0000000000p2',48000000,'active'),
-  ('00000000-0000-0000-0000-0000000000e5','00000000-0000-0000-0000-00000000c001','Hoàng Minh E','mkt.head@bizos.demo','00000000-0000-0000-0000-00000000d002','00000000-0000-0000-0000-0000000000p2',45000000,'active'),
-  ('00000000-0000-0000-0000-0000000000e6','00000000-0000-0000-0000-00000000c001','Đỗ Quỳnh F','ops.head@bizos.demo','00000000-0000-0000-0000-00000000d003','00000000-0000-0000-0000-0000000000p2',42000000,'active'),
-  ('00000000-0000-0000-0000-0000000000e7','00000000-0000-0000-0000-00000000c001','Vũ Thanh G','cs.head@bizos.demo','00000000-0000-0000-0000-00000000d004','00000000-0000-0000-0000-0000000000p2',38000000,'active')
+  ('00000000-0000-0000-0000-0000000000e1','00000000-0000-0000-0000-00000000c001','Nguyễn Văn A','ceo@singapodent.demo',null,'00000000-0000-0000-0000-0000000000p1',80000000,'active'),
+  ('00000000-0000-0000-0000-0000000000e2','00000000-0000-0000-0000-00000000c001','Trần Thị B','hr@singapodent.demo','00000000-0000-0000-0000-00000000d005','00000000-0000-0000-0000-0000000000p2',45000000,'active'),
+  ('00000000-0000-0000-0000-0000000000e3','00000000-0000-0000-0000-00000000c001','Lê Văn C','cfo@singapodent.demo','00000000-0000-0000-0000-00000000d006','00000000-0000-0000-0000-0000000000p2',50000000,'active'),
+  ('00000000-0000-0000-0000-0000000000e4','00000000-0000-0000-0000-00000000c001','Phạm Thu D','sales.head@singapodent.demo','00000000-0000-0000-0000-00000000d001','00000000-0000-0000-0000-0000000000p2',48000000,'active'),
+  ('00000000-0000-0000-0000-0000000000e5','00000000-0000-0000-0000-00000000c001','Hoàng Minh E','mkt.head@singapodent.demo','00000000-0000-0000-0000-00000000d002','00000000-0000-0000-0000-0000000000p2',45000000,'active'),
+  ('00000000-0000-0000-0000-0000000000e6','00000000-0000-0000-0000-00000000c001','Đỗ Quỳnh F','ops.head@singapodent.demo','00000000-0000-0000-0000-00000000d003','00000000-0000-0000-0000-0000000000p2',42000000,'active'),
+  ('00000000-0000-0000-0000-0000000000e7','00000000-0000-0000-0000-00000000c001','Vũ Thanh G','cs.head@singapodent.demo','00000000-0000-0000-0000-00000000d004','00000000-0000-0000-0000-0000000000p2',38000000,'active')
 on conflict do nothing;
 
 -- Mark department heads
@@ -123,7 +123,7 @@ on conflict do nothing;
 
 -- 11. App settings
 insert into app_settings (company_id, settings) values
-  ('00000000-0000-0000-0000-00000000c001','{"brand":"BIZOS","fiscal_year_start":"01-01"}'::jsonb)
+  ('00000000-0000-0000-0000-00000000c001','{"brand":"SingapoDent","fiscal_year_start":"01-01"}'::jsonb)
 on conflict do nothing;
 
 insert into user_preferences (company_id, auth_user_id, locale, timezone, date_format, theme, compact_sidebar, notification_settings, security_settings) values
@@ -146,7 +146,7 @@ on conflict do nothing;
 -- Post-seed notes
 -- =============================================================================
 -- 1. Create Supabase auth users (Dashboard → Authentication → Add user) for:
---    ceo@bizos.demo / hr@bizos.demo / cfo@bizos.demo / sales.head@bizos.demo
+--    ceo@singapodent.demo / hr@singapodent.demo / cfo@singapodent.demo / sales.head@singapodent.demo
 -- 2. For each, capture their auth.users.id and update employees.auth_user_id,
 --    then insert matching user_roles rows, e.g.:
 --    insert into user_roles (auth_user_id, company_id, role) values
