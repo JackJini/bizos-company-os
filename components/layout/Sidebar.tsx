@@ -8,7 +8,7 @@ import { NAV_GROUPS, type NavGroup, type NavItem } from "@/lib/nav";
 import { t as rawT, type Locale } from "@/lib/i18n/dict";
 import { cn } from "@/lib/utils";
 
-const STORAGE_KEY = "bizos.sidebar.groups";
+const STORAGE_KEY = "singapodent.sidebar.groups";
 
 function filterGroups(groups: NavGroup[], roles: string[]): NavGroup[] {
   return groups
@@ -95,10 +95,10 @@ export function Sidebar({
     <aside className="hidden md:flex md:w-[240px] md:flex-col md:fixed md:inset-y-0 md:left-0 md:z-30 md:bg-white md:ring-1 md:ring-[var(--line-soft)]">
       <div className="flex h-[78px] items-center gap-3 px-5 border-b border-[var(--line-soft)]">
         <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-gradient-to-br from-[#6D5EF7] to-[#415BFF] text-white font-bold text-base shadow-[0_10px_25px_rgba(88,72,246,0.22)]">
-          B
+          S
         </div>
         <div className="flex flex-col leading-tight">
-          <span className="text-[16px] font-bold text-[var(--text-strong)]">BIZOS</span>
+          <span className="text-[16px] font-bold text-[var(--text-strong)]">SingapoDent</span>
           <span className="text-[11px] text-[var(--text-soft)] mt-0.5">{t("brand.tagline")}</span>
         </div>
       </div>

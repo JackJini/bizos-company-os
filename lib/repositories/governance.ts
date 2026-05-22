@@ -43,9 +43,9 @@ export async function listReports() {
 export async function listReportSchedules() {
   return withDemoFallback(
     [
-      { id: "s1", company_id: demo.DEMO_COMPANY_ID, kind: "KPI công ty", cron: "0 7 * * 1", recipients: ["ceo@bizos.demo", "cfo@bizos.demo"], active: true },
-      { id: "s2", company_id: demo.DEMO_COMPANY_ID, kind: "Payroll", cron: "0 16 1 * *", recipients: ["hr@bizos.demo"], active: true },
-      { id: "s3", company_id: demo.DEMO_COMPANY_ID, kind: "Cash flow", cron: "0 8 * * *", recipients: ["ceo@bizos.demo", "cfo@bizos.demo", "finance@bizos.demo"], active: true },
+      { id: "s1", company_id: demo.DEMO_COMPANY_ID, kind: "KPI công ty", cron: "0 7 * * 1", recipients: ["ceo@singapodent.demo", "cfo@singapodent.demo"], active: true },
+      { id: "s2", company_id: demo.DEMO_COMPANY_ID, kind: "Payroll", cron: "0 16 1 * *", recipients: ["hr@singapodent.demo"], active: true },
+      { id: "s3", company_id: demo.DEMO_COMPANY_ID, kind: "Cash flow", cron: "0 8 * * *", recipients: ["ceo@singapodent.demo", "cfo@singapodent.demo", "finance@singapodent.demo"], active: true },
     ],
     async (db) => {
       const { data, error } = await db.from("report_schedules").select("*").order("kind");

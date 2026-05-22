@@ -1,7 +1,7 @@
 import { cookies } from "next/headers";
 import { DEFAULT_LOCALE, DICT, type Locale, t as rawT } from "./dict";
 
-const COOKIE = "bizos_locale";
+const COOKIE = "singapodent_locale";
 
 export async function getLocale(): Promise<Locale> {
   try {

@@ -16,7 +16,7 @@ export default async function AppLayout({ children }: { children: React.ReactNod
     <AppContextProvider locale={locale} roles={context.roles}>
       <div className="min-h-screen bg-[var(--background)] flex flex-col">
         <Sidebar locale={locale} roles={context.roles} />
-        <Topbar userEmail={user?.email ?? "demo@bizos.local"} locale={locale} roleLabel={roleLabel} />
+        <Topbar userEmail={user?.email ?? "demo@singapodent.local"} locale={locale} roleLabel={roleLabel} />
         <main className="flex-1 px-6 py-5 md:ml-[240px]">{children}</main>
         <div className="md:ml-[240px]">
           <Footer locale={locale} />
